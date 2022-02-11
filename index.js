@@ -3,18 +3,25 @@ const fs = require('fs')
 const path = require('path')
 
 function main() {
-  fs.writeFileSync(
-    path.join(__dirname, '.prettierrc'),
+  const filepath = path.join(process.cwd(), '.prettierrc')
+
+  fs.writeFile(
+    path.join(filepath),
     `{
   "trailingComma": "es5",
   "tabWidth": 2,
   "semi": false,
   "singleQuote": true,
   "printWidth": 120
-}`
+}`,
+    (err) => {
+      if (err) {
+        console.log(err)
+      } else {
+        console.log(filepath)
+      }
+    }
   )
-
-  console.log('.prettierrc')
 }
 
 if (require.main === module) {
