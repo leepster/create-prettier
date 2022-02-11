@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+require('@leepster/node-console')
 const fs = require('fs')
 const path = require('path')
 
@@ -16,9 +17,9 @@ function main() {
 }`,
     (err) => {
       if (err) {
-        console.log(err)
+        console.error(err)
       } else {
-        console.log(filepath)
+        console.info(filepath)
       }
     }
   )

@@ -1,7 +1,7 @@
 {
   "bin": "./index.js",
   "name": "@leepster/create-prettier",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,5 +16,8 @@
   "license": "ISC",
   "devDependencies": {
     "prettier": "^2.5.1"
+  },
+  "dependencies": {
+    "@leepster/node-console": "^1.0.1"
   }
 }
